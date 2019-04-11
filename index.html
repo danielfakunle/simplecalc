@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .right-items
+            {
+                position:absolute;
+                box-sizing:border-box;
+                padding:40px;
+                margin-top:0px;
+                margin-right:-30px;
+                top:0;
+                right:0;
+                width:300px;
+                height:400px;
+                background-size:cover;
+                background-position:center;
+            }
+            input[type="button"]
+            {
+                border:none;
+                margin-bottom:28px;
+                width:120px;
+                height:32px;
+                background-color:gold;
+                border-radius:2px;
+                font-family:sans-serif;
+                font-weight:500px;
+                text-transform: uppercase;
+                transition: 0.2s ease;
+                cursor:pointer; 
+
+            }
+            input[type="number"]
+            {
+                background-color:silver;
+                display:block;
+                box-sizing:border-box;
+                margin-bottom:20px;
+                padding:4px;
+                width:220px;
+                height:32px;
+                border:none;
+                outline:none;
+                border-bottom:1px solid darkblue;
+                font-family:sans-serif;
+                font-size:15px;
+                transition: 0.2s ease;
+                
+            }
+            h1
+            {
+                font-family:sans-serif;
+                margin:0 0 20px 0;
+                font-weight:300;
+                font-size:28px;
+            }
+            #calculator-items
+            {
+                margin-top:20px;
+                margin-left:60px;
+                position:absolute;
+                top:0;
+                left:0;
+                box-sizing:border-box;
+                padding:24px;
+                width:300px;
+                height:400px;
+            }
+            
+            #calculator-box
+            {
+                width:600px;
+                position:relative;
+                margin:5% auto;
+                height: 300px;
+                background-color:silver;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.705)
+
+            }
+            body
+            {
+                background-image:url(math.png);
+                background-size:cover;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="calculator">
+        <div id="calculator-box">
+            <div id="calculator-items">
+            <h1>The Calculator.</h1>
+            <input type="number" name="num_1" placeholder="First Number"/>
+            <input type="number" name="num_2" placeholder="Second Number"/>
+            <input type="number" name="sumResult" placeholder="The Result Goes here"/>
+            </div>
+            <div class="right-items">
+                <input type="button" value="Add" onClick="sumValues()"/>
+                <input type="button" value="Subtract" onClick="subtractValues()"/>
+                <input type="button" value="Divide" onClick="divideValues()"/>
+                <input type="button" value="Multiply" onClick="multiplyValues()"/>
+            </div>
+        </div>
+    </form>
+        
+    </body>
+    <script type="text/javascript">
+        function sumValues(){
+            var num1, num2, res;
+            num1=Number(document.calculator.num_1.value);
+            num2=Number(document.calculator.num_2.value);
+            res=num1+num2;
+            document.calculator.sumResult.value=res;
+        }
+        function subtractValues(){
+            var num1, num2, res;
+            num1=Number(document.calculator.num_1.value);
+            num2=Number(document.calculator.num_2.value);
+            res=num1-num2;
+            document.calculator.sumResult.value=res;
+        }
+        function multiplyValues(){
+            var num1, num2, res;
+            num1=Number(document.calculator.num_1.value);
+            num2=Number(document.calculator.num_2.value);
+            res=num1*num2;
+            document.calculator.sumResult.value=res;
+        }
+        function divideValues(){
+            var num1, num2, res, np;
+            num1=Number(document.calculator.num_1.value);
+            num2=Number(document.calculator.num_2.value);
+            res=num1/num2;
+            document.calculator.sumResult.value=res;
+
+}
+    </script>
+</html>
