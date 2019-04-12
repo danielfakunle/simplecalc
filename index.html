@@ -39,7 +39,7 @@ and open the template in the editor.
                 cursor:pointer; 
 
             }
-            input[type="number"]
+            input[type="text"]
             {
                 background-color:silver;
                 display:block;
@@ -99,49 +99,19 @@ and open the template in the editor.
         <div id="calculator-box">
             <div id="calculator-items">
             <h1>The Calculator.</h1>
-            <input type="number" name="num_1" placeholder="First Number"/>
-            <input type="number" name="num_2" placeholder="Second Number"/>
-            <input type="number" name="sumResult" placeholder="The Result Goes here"/>
+            <input type="text" name="num_1" placeholder="First Number"/>
+            <input type="text" name="num_2" placeholder="Second Number"/>
+            <input type="text" name="sumResult" placeholder="The Result Goes here"/>
             </div>
             <div class="right-items">
-                <input type="button" value="Add" onClick="sumValues()"/>
-                <input type="button" value="Subtract" onClick="subtractValues()"/>
-                <input type="button" value="Divide" onClick="divideValues()"/>
-                <input type="button" value="Multiply" onClick="multiplyValues()"/>
+                <input type="button" value="Add" onClick="sum()"/>
+                <input type="button" value="Subtract" onClick="sub()"/>
+                <input type="button" value="Divide" onClick="divi()"/>
+                <input type="button" value="Multiply" onClick="multi()"/>
             </div>
         </div>
     </form>
         
     </body>
-    <script type="text/javascript">
-        function sumValues(){
-            var num1, num2, res;
-            num1=Number(document.calculator.num_1.value);
-            num2=Number(document.calculator.num_2.value);
-            res=num1+num2;
-            document.calculator.sumResult.value=res;
-        }
-        function subtractValues(){
-            var num1, num2, res;
-            num1=Number(document.calculator.num_1.value);
-            num2=Number(document.calculator.num_2.value);
-            res=num1-num2;
-            document.calculator.sumResult.value=res;
-        }
-        function multiplyValues(){
-            var num1, num2, res;
-            num1=Number(document.calculator.num_1.value);
-            num2=Number(document.calculator.num_2.value);
-            res=num1*num2;
-            document.calculator.sumResult.value=res;
-        }
-        function divideValues(){
-            var num1, num2, res, np;
-            num1=Number(document.calculator.num_1.value);
-            num2=Number(document.calculator.num_2.value);
-            res=num1/num2;
-            document.calculator.sumResult.value=res;
-
-}
-    </script>
+    <script src="./operations.js" type="text/javascript"></script>
 </html>
